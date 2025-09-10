@@ -19,4 +19,4 @@ jobs:
           python-version: 3.11
 
       - name: Run hello script
-        run: python hello.py
+        run: python notebooks/hello.py
