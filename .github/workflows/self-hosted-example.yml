@@ -11,12 +11,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.11
-      - run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt papermill
-      - run: |
-          mkdir -p output
-          papermill notebooks/analysis.ipynb output/analysis-selfhosted.ipynb
+      - run: python -m pip install --upgrade pip
+      - run: pip install -r requirements.txt papermill
+      - run: mkdir -p output
+      - run: papermill notebooks/analysis.ipynb output/analysis-selfhosted.ipynb
       - uses: actions/upload-artifact@v4
         with:
           name: executed-notebook-selfhosted
