@@ -2,7 +2,7 @@
 name: Simple Python Workflow
 
 on:
-  push:
+  pull_request:
     branches: [ main ]   # run when code is pushed to main
 
 jobs:
